@@ -1,0 +1,7 @@
+  <div class="storeGrid">
+    <div *ngFor="let products of products">
+      <h2>{{products.name}}</h2>
+      <img  [src]="products.image" [alt]="products.name">
+      <p>El precio es: ${{products.price}}</p>
+    </div>
+  </div>

@@ -1,27 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { product } from 'src/app/models/product.model';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: 'app-imagenes',
+  templateUrl: './imagenes.component.html',
+  styleUrls: ['./imagenes.component.scss']
 })
-export class AppComponent {
-
-  register ={
-    nombre: '',
-    email: '',
-    password: ''
-  }
-
-  person =
-    {
-      name: '',
-      lastName: '',
-      age: ''
-    }
-
-    imagewidth = '200'
+export class ImagenesComponent  {
 
   products: product [] = [
     {
@@ -56,10 +41,9 @@ export class AppComponent {
     }
   ]
 
-  onRegister(){
-    console.log(this.register)
-  }
+
+  constructor() { }
+
 
 
 }
-

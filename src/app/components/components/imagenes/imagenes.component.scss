@@ -10,30 +10,11 @@
     }
   }
 }
+
 @media screen and (min-width: 40em){
   .storeGrid{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-gap: 15px;
-  }
-}
-
-.messageError{
-  color: red;
-  opacity: 0;
-  &.active{
-    opacity: 1;
-  }
-}
-
-.barrita{
-  height: 0;
-  border-bottom: solid;
-  &.invisible{
-    opacity: 0;
-  &.visible{
-    opacity: 1;
-    border-bottom: crimson;
-  }
   }
 }

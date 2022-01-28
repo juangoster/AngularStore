@@ -28,15 +28,6 @@
   'visible':nombre.invalid
 }">
 
-<input type="text" [(ngModel)]="imagewidth" placeholder="escribe el tamaño de las imagenes">
-
-
-  <div class="storeGrid">
-    <div *ngFor="let products of products">
-      <h2>{{products.name}}</h2>
-      <img [style.width.%]="imagewidth" [src]="products.image" [alt]="products.name">
-      <p>El precio es: ${{products.price}}</p>
-    </div>
-  </div>
+<app-imagenes-component></app-imagenes-component>
 
 

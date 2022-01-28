@@ -3,12 +3,17 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule} from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ImagenesComponent } from './components/components/imagenes/imagenes.component';
+import { ImagenesComponentComponent } from './components/imagenes-component/imagenes-component.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    ImagenesComponent
+    ImagenesComponentComponent,
+    LoginComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,

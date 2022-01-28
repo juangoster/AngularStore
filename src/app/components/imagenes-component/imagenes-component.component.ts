@@ -2,11 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { product } from 'src/app/models/product.model';
 
 @Component({
-  selector: 'app-imagenes',
-  templateUrl: './imagenes.component.html',
-  styleUrls: ['./imagenes.component.scss']
+  selector: 'app-imagenes-component',
+  templateUrl: './imagenes-component.component.html',
+  styleUrls: ['./imagenes-component.component.scss']
 })
-export class ImagenesComponent  {
+export class ImagenesComponentComponent implements OnInit {
+
+  imagewidth = '100'
 
   products: product [] = [
     {
@@ -44,6 +46,7 @@ export class ImagenesComponent  {
 
   constructor() { }
 
-
+  ngOnInit(): void {
+  }
 
 }

@@ -1,0 +1,6 @@
+<h2>Nombre: {{desdeApp}}</h2>
+<img width="200" [src]="imagen" (load)="imgLoaded()" (error)="imgError()" *ngIf="imagen; else elseIma">
+<ng-template #elseIma>
+  <img [src]="imageDefault" alt="">
+</ng-template>
+

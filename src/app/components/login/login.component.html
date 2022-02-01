@@ -1,1 +1,19 @@
-<p>login works!</p>
+<form (ngSubmit)="onRegister()" #nuevoForm="ngForm"  >
+  <div class="grupo">
+    <label for="name">Nombre: </label>
+    <input id="name" required type="text" name="name" #name="ngModel" [(ngModel)]="register.nombre">
+    <p class="messageError" [class.active]="name.invalid">Campo requerido</p>
+  </div>
+  <div class="grupo">
+    <label for="email">E-Mail: </label>
+    <input id="email" required  type="text" name="email" #email="ngModel" [(ngModel)]="register.email">
+    <p class="messageError" [class.active]="email.invalid">Campo requerido</p>
+  </div>
+  <div class="grupo">
+    <label for="pass">Contraseña: </label>
+    <input id="pass" required  type="text" name="pass" #pass="ngModel" [(ngModel)]="register.password">
+    <p class="messageError" [class.active]="pass.invalid">Campo requerido</p>
+  </div>
+  <button [disabled]="nuevoForm.invalid" type="submit">Registrar</button>
+
+</form>

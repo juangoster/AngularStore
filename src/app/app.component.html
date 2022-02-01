@@ -1,33 +1,13 @@
-
-<form (ngSubmit)="onRegister()" #nuevoForm="ngForm"  >
-  <div class="grupo">
-    <label for="name">Nombre: </label>
-    <input id="name" required type="text" name="name" #name="ngModel" [(ngModel)]="register.nombre">
-    <p class="messageError" [class.active]="name.invalid">Campo requerido</p>
-  </div>
-  <div class="grupo">
-    <label for="email">E-Mail: </label>
-    <input id="email" required  type="text" name="email" #email="ngModel" [(ngModel)]="register.email">
-    <p class="messageError" [class.active]="email.invalid">Campo requerido</p>
-  </div>
-  <div class="grupo">
-    <label for="pass">Contraseña: </label>
-    <input id="pass" required  type="text" name="pass" #pass="ngModel" [(ngModel)]="register.password">
-    <p class="messageError" [class.active]="pass.invalid">Campo requerido</p>
-  </div>
-  <button [disabled]="nuevoForm.invalid" type="submit">Registrar</button>
-
-</form>
-
-<hr>
-<input type="text" required #nombre="ngModel" [(ngModel)]="person.name">
-<h2>{{person.name}}</h2>
-<p class="messageError" [class.active]="nombre.invalid">este espacio es requerido</p>
-<hr class="barrita" [ngClass]="{
-  'invisible': nombre.valid,
-  'visible':nombre.invalid
-}">
-
+<!--
 <app-imagenes-component></app-imagenes-component>
 
+<input type="text" [(ngModel)]="padre"  placeholder="nombre">
+<br>
+<input type="text" [(ngModel)]="image" placeholder="url imagen">
+<h2>{{alert}}</h2>
 
+<app-input (loaded)="onLoaded($event)" [desdeApp]="padre" [imagen]="image"></app-input>
+
+<app-padre></app-padre>
+-->
+<app-producto [product]="prod" *ngFor="let prod of productos "></app-producto>

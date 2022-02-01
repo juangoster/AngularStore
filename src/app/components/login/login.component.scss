@@ -1,0 +1,20 @@
+
+.messageError{
+  color: red;
+  opacity: 0;
+  &.active{
+    opacity: 1;
+  }
+}
+
+.barrita{
+  height: 0;
+  border-bottom: solid;
+  &.invisible{
+    opacity: 0;
+  &.visible{
+    opacity: 1;
+    border-bottom: crimson;
+  }
+  }
+}

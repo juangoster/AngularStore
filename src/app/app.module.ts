@@ -8,10 +8,7 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { InputComponent } from './components/input/input.component';
 import { ProductoComponent } from './components/producto/producto.component';
-import { PruebasComponent } from './components/pruebas/pruebas.component';
-import { ProductsComponent } from './components/products/products.component';
-import { ImgComponent } from './components/img/img.component';
-
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 
 @NgModule({
@@ -22,9 +19,7 @@ import { ImgComponent } from './components/img/img.component';
     RegisterComponent,
     InputComponent,
     ProductoComponent,
-    PruebasComponent,
-    ProductsComponent,
-    ImgComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,

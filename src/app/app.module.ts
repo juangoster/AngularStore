@@ -7,8 +7,11 @@ import { ImagenesComponentComponent } from './components/imagenes-component/imag
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { InputComponent } from './components/input/input.component';
-
 import { ProductoComponent } from './components/producto/producto.component';
+import { PruebasComponent } from './components/pruebas/pruebas.component';
+import { ProductsComponent } from './components/products/products.component';
+import { ImgComponent } from './components/img/img.component';
+
 
 
 @NgModule({
@@ -19,6 +22,9 @@ import { ProductoComponent } from './components/producto/producto.component';
     RegisterComponent,
     InputComponent,
     ProductoComponent,
+    PruebasComponent,
+    ProductsComponent,
+    ImgComponent,
   ],
   imports: [
     BrowserModule,

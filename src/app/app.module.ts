@@ -9,6 +9,8 @@ import { RegisterComponent } from './components/register/register.component';
 import { InputComponent } from './components/input/input.component';
 import { ProductoComponent } from './components/producto/producto.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { ProductsComponent } from './components/products/products.component';
+import { ImgComponent } from './components/img/img.component';
 
 
 @NgModule({
@@ -20,6 +22,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     InputComponent,
     ProductoComponent,
     NavbarComponent,
+    ProductsComponent,
+    ImgComponent
   ],
   imports: [
     BrowserModule,

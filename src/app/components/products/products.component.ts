@@ -8,7 +8,8 @@ import { product } from 'src/app/models/product.model';
   styleUrls: ['./products.component.scss']
 })
 export class ProductsComponent implements OnInit {
-
+  totalPrice: number = 0;
+  shoppingCart: product[] =[]
   productos: product[] = [
     {
       ID: '001',
@@ -48,9 +49,18 @@ export class ProductsComponent implements OnInit {
     }
   ];
 
+
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onShoppingCart(product: product){
+    this.shoppingCart.push(product)
+    //this.totalPrice += product.price;
+    this.totalPrice = this.shoppingCart.reduce((sum, item)=> sum + item.price, 0); //este metodo de los array lo que hace es devolver la sumatoria de los price en el array
+    console.log(this.shoppingCart)
   }
 
 }

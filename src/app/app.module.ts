@@ -11,6 +11,10 @@ import { ProductoComponent } from './components/producto/producto.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ProductsComponent } from './components/products/products.component';
 import { ImgComponent } from './components/img/img.component';
+import {HttpClientModule} from '@angular/common/http';
+import { ReversePipe } from './pipes/reverse.pipe';
+import { HighLightDirective } from './directives/high-light.directive';
+
 
 
 @NgModule({
@@ -23,12 +27,15 @@ import { ImgComponent } from './components/img/img.component';
     ProductoComponent,
     NavbarComponent,
     ProductsComponent,
-    ImgComponent
+    ImgComponent,
+    ReversePipe,
+    HighLightDirective
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

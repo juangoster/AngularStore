@@ -9,9 +9,11 @@ import { product } from 'src/app/models/product.model';
 export class ImgComponent implements OnInit {
 
   @Input() imagen: product ={
-    ID: '',
-    name: '',
+    id: '',
+    title:  '',
     price: 0,
+    category: '',
+    description: '',
     image: ''
   }
 

@@ -16,6 +16,18 @@ export class ProductsComponent implements OnInit {
   myShopingCart: product[] = [];
   productos: product[] = [];
   showProductDetail = false;
+  oneProductToShow: product = {
+    id: '',
+    title:  '',
+    price: 0,
+    category: {
+      id: '',
+      name: '',
+      typeImg: ''
+    },
+    description: '',
+    images: []
+  };
 
 
   constructor(
@@ -42,4 +54,11 @@ export class ProductsComponent implements OnInit {
    this.showProductDetail=!this.showProductDetail
   }
 
+  onShowDetail(id: string){
+    this.productsService.getProduct(id)
+    .subscribe(data=>{
+      this.oneProductToShow = data
+      console.log(this.oneProductToShow)
+    })
+  }
 }

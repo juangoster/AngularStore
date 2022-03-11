@@ -12,9 +12,13 @@ export class ImgComponent implements OnInit {
     id: '',
     title:  '',
     price: 0,
-    category: '',
+    category: {
+      id: '',
+      name: '',
+      typeImg: ''
+    },
     description: '',
-    image: ''
+    images: []
   }
 
   constructor() { }

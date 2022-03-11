@@ -5,6 +5,15 @@
 </div>
 
 <div class="products--grid">
-  <app-producto [product]="prod" *ngFor="let prod of productos" (addedProduct)="addToShopingcart($event)"></app-producto>
+  <app-producto [product]="prod" *ngFor="let prod of productos" (addedProduct)="addToShopingcart($event)" (click)="toggleProduct()"></app-producto>
+</div>
+<div class="product-detail" [class.active]="showProductDetail">
+  <button (click)="toggleProduct()">Close</button>
+  <div>
+    <app-img [imagen]="showProductDetail"></app-img>
+    <p></p>
+    <p></p>
+    <p></p>
+  </div>
 </div>
 

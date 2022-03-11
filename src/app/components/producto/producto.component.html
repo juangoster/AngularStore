@@ -1,5 +1,5 @@
 <!-- <img width="250" [src]="product.image" alt=""> -->
-<app-img [imagen]="product"></app-img>
+<app-img [imagen]="product" (click)="showProductDetail()"></app-img>
 <h2 appHighLight>el precio es: $ {{product.price}}</h2>
 <p>{{product.title}}</p>
 <button (click)="addToCart()" >Add to cart</button>

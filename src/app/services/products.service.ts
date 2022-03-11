@@ -13,6 +13,7 @@ export class ProductsService {
   ) { }
 
   getAllProducts(){
-    return this.http.get<product[]>('https://fakestoreapi.com/products')
+    return this.http.get<product[]>('https://young-sands-07814.herokuapp.com/api/products')
   }
+
 }

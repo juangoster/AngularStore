@@ -14,6 +14,7 @@ import { ImgComponent } from './components/img/img.component';
 import {HttpClientModule} from '@angular/common/http';
 import { ReversePipe } from './pipes/reverse.pipe';
 import { HighLightDirective } from './directives/high-light.directive';
+import { SwiperModule } from 'swiper/angular';
 
 
 
@@ -29,13 +30,14 @@ import { HighLightDirective } from './directives/high-light.directive';
     ProductsComponent,
     ImgComponent,
     ReversePipe,
-    HighLightDirective
+    HighLightDirective,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    SwiperModule
   ],
   providers: [],
   bootstrap: [AppComponent]

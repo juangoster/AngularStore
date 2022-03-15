@@ -5,19 +5,24 @@
 </div>
 
 <div class="products--grid">
-  <app-producto [product]="prod" 
-  *ngFor="let prod of productos" 
-  (addedProduct)="addToShopingcart($event)" 
-  (click)="toggleProduct()"
+  <app-producto [product]="prod"
+  *ngFor="let prod of productos"
+  (addedProduct)="addToShopingcart($event)"
   (showProduct)="onShowDetail($event)"
   ></app-producto>
 </div>
 
 <div class="product-detail" [class.active]="showProductDetail">
   <button (click)="toggleProduct()">Close</button>
-  <div>
-    <app-img [imagen]="oneProductToShow"></app-img>
-    <p>{{ oneProductToShow.title }}</p>
+  <div *ngIf="oneProductToShow">
+    <swiper
+      [slidesPerView]="1"
+    >
+      <ng-template swiperSlide *ngFor="let slides of oneProductToShow.images">
+        <img [src]="slides">
+      </ng-template>
+    </swiper>
+    <h1>{{ oneProductToShow.title }}</h1>
     <p>{{ oneProductToShow.price }}</p>
     <p>{{ oneProductToShow.description }}</p>
   </div>

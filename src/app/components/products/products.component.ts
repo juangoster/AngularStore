@@ -57,8 +57,8 @@ export class ProductsComponent implements OnInit {
   onShowDetail(id: string){
     this.productsService.getProduct(id)
     .subscribe(data=>{
+      this.toggleProduct();
       this.oneProductToShow = data
-      console.log(this.oneProductToShow)
     })
   }
 }

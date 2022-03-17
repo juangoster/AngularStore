@@ -41,4 +41,8 @@ export class ProductsService {
 
   }
 
+  delete(id: string){
+    return this.http.delete<boolean>(`${this.apiURL}/${id}`)
+  }
+
 }

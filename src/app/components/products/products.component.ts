@@ -61,4 +61,20 @@ export class ProductsComponent implements OnInit {
       this.oneProductToShow = data
     })
   }
+
+  createNewProduct(){
+    this.productsService.createProduct()
+    .subscribe(data=>{
+      this.productos.unshift(data);
+    })
+  }
+
+  updateCurrentProduct(){
+    this.productsService.updateProduct(this.oneProductToShow.id)
+    .subscribe(data=>{
+
+      const productIndex = this.productos.findIndex(item => item.id === this.oneProductToShow.id)
+      this.productos[productIndex] = data;
+    })
+  }
 }

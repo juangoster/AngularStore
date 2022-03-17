@@ -3,7 +3,7 @@
   <p>total de la compra: ${{totalShopping | currency:'COP'}}</p>
   <p>fecha: {{today | date}}</p>
 </div>
-
+<button (click)="createNewProduct()">crear producto</button>
 <div class="products--grid">
   <app-producto [product]="prod"
   *ngFor="let prod of productos"
@@ -25,6 +25,7 @@
     <h1>{{ oneProductToShow.title }}</h1>
     <p>{{ oneProductToShow.price }}</p>
     <p>{{ oneProductToShow.description }}</p>
+    <button (click)="updateCurrentProduct()">actualizar</button>
   </div>
 </div>
 

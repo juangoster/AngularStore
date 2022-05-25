@@ -11,6 +11,8 @@
   (showProduct)="onShowDetail($event)"
   ></app-producto>
 </div>
+<button *ngIf="offset > 0" (click)="LoadPrevious()">Previous</button>
+<button (click)="loadNext()">Next</button>
 
 <div class="product-detail" [class.active]="showProductDetail">
   <button (click)="toggleProduct()">Close</button>

@@ -4,6 +4,7 @@
   <p>fecha: {{today | date}}</p>
 </div>
 <button (click)="createNewProduct()">crear producto</button>
+<button (click)="onShowDetail('55555555')">detalle no encontrado</button>
 <div class="products--grid">
   <app-producto [product]="prod"
   *ngFor="let prod of productos"

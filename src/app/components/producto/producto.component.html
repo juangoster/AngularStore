@@ -2,4 +2,5 @@
 <app-img [imagen]="product" (click)="showProductDetail()"></app-img>
 <h2 appHighLight>el precio es: $ {{product.price}}</h2>
 <p>{{product.title}}</p>
+<p>total IVA: {{product?.taxes | currency:'COP'}}</p>
 <button (click)="addToCart()" >Add to cart</button>

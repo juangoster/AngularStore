@@ -11,10 +11,12 @@ import { ProductoComponent } from './components/producto/producto.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ProductsComponent } from './components/products/products.component';
 import { ImgComponent } from './components/img/img.component';
-import {HttpClientModule} from '@angular/common/http';
+import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 import { ReversePipe } from './pipes/reverse.pipe';
 import { HighLightDirective } from './directives/high-light.directive';
 import { SwiperModule } from 'swiper/angular';
+import { TokenInterceptor } from './interceptors/token.interceptor';
+import { FilesComponent } from './components/files/files.component';
 
 
 
@@ -31,6 +33,7 @@ import { SwiperModule } from 'swiper/angular';
     ImgComponent,
     ReversePipe,
     HighLightDirective,
+    FilesComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +42,9 @@ import { SwiperModule } from 'swiper/angular';
     HttpClientModule,
     SwiperModule
   ],
-  providers: [],
+  providers: [
+    {provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
